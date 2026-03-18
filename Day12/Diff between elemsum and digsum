@@ -1,0 +1,18 @@
+class Solution(object):
+    def differenceOfSum(self, nums):
+        elemsum=0
+        digit_sum=0
+        temp=0
+        size=len(nums)
+        for i in range(size):
+            elemsum+=nums[i]
+            temp=nums[i]
+            while(temp!=0):
+                digit_sum+=temp%10
+                temp=temp//10
+        return (elemsum-digit_sum)
+        """
+        :type nums: List[int]
+        :rtype: int
+        """
+        
