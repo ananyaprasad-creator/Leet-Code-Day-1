@@ -1,0 +1,20 @@
+class Solution(object):
+
+  def detectCapitalUse(self, word):
+    """:type word: str
+
+    :rtype: bool
+    """
+    # Case 1: All uppercase (e.g., "USA")
+    if word.isupper():
+      return True
+
+    # Case 2: All lowercase (e.g., "leetcode")
+    if word.islower():
+      return True
+
+    # Case 3: Title case (e.g., "Google" - First letter uppercase, rest lowercase)
+    if word.istitle():
+      return True
+
+    return False
